@@ -107,12 +107,12 @@ function handleFileSelect(evt) {
                     triggerMap.set(triggers[t]["triggerId"],triggers[t]["name"]);
                 }
 
-                // set up map of folder ids and names
-                var folders = jsonData["containerVersion"]["folder"];
-                var folderMap = new Map();
-                for (var f = 0; f < folders.length; ++f){
-                    folderMap.set(folders[f]["folderId"],folders[f]["name"]);
-                }
+                // // set up map of folder ids and names
+                // var folders = jsonData["containerVersion"]["folder"];
+                // var folderMap = new Map();
+                // for (var f = 0; f < folders.length; ++f){
+                //     folderMap.set(folders[f]["folderId"],folders[f]["name"]);
+                // }
 
                 // init arrays of params
                 var trig_names = [];
@@ -168,12 +168,12 @@ function handleFileSelect(evt) {
                         }
                     }
                     trig_names.push(trig_set.toString());
-                    if ('parentFolderId' in tags[g]){
-                        folder_names.push(folderMap.get(tags[g]['parentFolderId']));
-                    }
-                    else {
+                    // if ('parentFolderId' in tags[g]){
+                    //     folder_names.push(folderMap.get(tags[g]['parentFolderId']));
+                    // }
+                    // else {
                         folder_names.push("NA");
-                    }
+                    // }
                 }
 
                 // stuff here
